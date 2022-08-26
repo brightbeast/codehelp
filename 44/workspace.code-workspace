@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "..\\.."
+		},
+		{
+			"path": "C:\\Users\\Prajwal A Huggi\\LetsLearnGit"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"array": "cpp",
+			"deque": "cpp",
+			"string": "cpp",
+			"unordered_map": "cpp",
+			"vector": "cpp",
+			"initializer_list": "cpp",
+			"random": "cpp",
+			"iostream": "cpp"
+		}
+	}
+}
