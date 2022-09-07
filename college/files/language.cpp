@@ -9,7 +9,6 @@ int main()
     
     string s;
     ifstream input("hello.txt");
-    
     getline(input,s);
     input>>s;
     cout<<s;
