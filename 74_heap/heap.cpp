@@ -7,21 +7,21 @@ class heap{
     int size;
 
     heap(){
-        this->arr[0]=-1;
-        this->size=0;
+        arr[0]=-1;
+        size=0;
     }
 
     void insert(int val){
         size=size+1;
         int index=size;
 
-        arr[size]=val;
+        arr[index]=val;
 
         while(index>1)
         {
             int parent=index/2;
-            if(arr[parent]<arr[size]){
-                swap(arr[parent],arr[size]);
+            if(arr[parent]<arr[index]){
+                swap(arr[parent],arr[index]);
                 index=parent;
             }
             else
@@ -79,7 +79,7 @@ void heapify(int arr[], int n, int i)
     if(left <=n && arr[largest]<arr[left])
         largest=left;
 
-    else if(right <= n && arr[largest]<arr[right])
+    if(right <= n && arr[largest]<arr[right])
         largest=right;
     
     if(largest!=i)
@@ -125,7 +125,8 @@ int main()
     cout<<arr[i]<<" ";
     cout<<endl;
 
-    heapSort(arr, n);
+    int brr[6]={-1,54,53,55,52,50};
+    heapSort(brr, n);
     cout<<"Printing sorted heap "<<endl;
     for(int i=1; i<=n; i++)
     cout<<arr[i]<<" ";
