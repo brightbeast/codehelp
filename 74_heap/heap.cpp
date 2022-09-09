@@ -54,11 +54,11 @@ class heap{
             int leftIndex=2*i;
             int rightIndex=2*i+1;
 
-            if(arr[i]<arr[leftIndex]){
+            if(leftIndex<size && arr[i]<arr[leftIndex]){
             swap(arr[i],arr[leftIndex]);
             i=leftIndex;
             }
-            else if(arr[i]<arr[rightIndex]){
+            else if(rightIndex<size && arr[i]<arr[rightIndex]){
             swap(arr[i],arr[rightIndex]);
             i=rightIndex;
             }
@@ -97,7 +97,7 @@ void heapSort(int arr[], int n)
         swap(arr[size], arr[1]);
         size--;
 
-        heapify(arr,n, 1);
+        heapify(arr,size, 1);
     }
 }
 
@@ -126,7 +126,7 @@ int main()
     cout<<endl;
 
     int brr[6]={-1,54,53,55,52,50};
-    heapSort(brr, n);
+    heapSort(brr, 15);
     cout<<"Printing sorted heap "<<endl;
     for(int i=1; i<=n; i++)
     cout<<arr[i]<<" ";
